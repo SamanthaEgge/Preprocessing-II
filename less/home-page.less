@@ -1,4 +1,15 @@
 .home {
+  .img-bounce {
+    animation-name: bounce;
+    animation-duration: 4s;
+    .anim-iteration(3);
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+  }
 
   .content-section {
     margin: 30px 0;
@@ -24,7 +35,7 @@
       padding-left: 1%;
       @media @mobile {
         width: 100%;
-        padding-left: 5px;
+        text-align: center;
       }
 
       img {
@@ -36,6 +47,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -76,6 +91,9 @@
 
       .btn{
         .btn-mix(#008080);
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }

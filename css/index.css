@@ -175,7 +175,7 @@ header {
   align-items: center;
   justify-content: center;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   header {
     flex-direction: column;
   }
@@ -187,7 +187,7 @@ header .title {
   padding-left: 40px;
   padding-right: 328px;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   header .title {
     padding-right: 40px;
     margin-bottom: 10px;
@@ -224,13 +224,33 @@ header nav a h3 {
   font-size: 1.6rem;
   padding: 20px;
 }
+.home .img-bounce {
+  animation-name: bounce;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .home .content-section {
     flex-direction: column;
   }
@@ -239,7 +259,7 @@ header nav a h3 {
   width: 48%;
   padding-right: 1%;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .home .content-section .text-content {
     width: 100%;
     padding-left: 4px;
@@ -250,10 +270,10 @@ header nav a h3 {
   width: 48%;
   padding-left: 1%;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .home .content-section .img-content {
     width: 100%;
-    padding-left: 5px;
+    text-align: center;
   }
 }
 .home .content-section .img-content img {
@@ -262,6 +282,11 @@ header nav a h3 {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -284,7 +309,7 @@ header nav a h3 {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .home .content-pick {
     flex-direction: column;
     align-items: center;
@@ -294,7 +319,7 @@ header nav a h3 {
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .home .content-pick .destination {
     width: 60%;
   }
@@ -309,4 +334,9 @@ header nav a h3 {
   height: 45px;
   padding-top: 15px;
   border-radius: 8px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    width: 100%;
+  }
 }
