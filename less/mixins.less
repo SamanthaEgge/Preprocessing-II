@@ -1,1 +1,16 @@
 // Mixins in here
+.btn-mix (@button-color) {
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: @button-color;
+    text-align: center;
+    color: white;
+    height: 45px;
+    padding-top: 15px;
+    border-radius: 8px;
+}
+
+.anim-iteration (@numtimes) {
+    animation-iteration-count: @numtimes;
+}
